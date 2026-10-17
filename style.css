@@ -62,4 +62,28 @@ footer{text-align:center;padding:1.6rem;color:var(--muted);font-size:.8rem;lette
   header.site{flex-direction:column;align-items:flex-start}
   nav a{margin:0 1.1rem 0 0}
   .embed{height:420px}
+
+/* ===== Additions v2 (replace the earlier additions block if you already pasted it) ===== */
+
+/* Skip link for keyboard and screen-reader users */
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:#fff;padding:.6rem 1rem;z-index:10;text-decoration:none}
+.skip:focus{left:0}
+
+/* Current page in the nav */
+nav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
+
+/* "Browse by section" line on the home page */
+.browse{font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:.2rem 0 0}
+
+/* Empty-state note on Education */
+.note{background:var(--panel-soft);border:1px solid var(--line);padding:1.25rem 1.5rem;margin-top:1.5rem}
+.note p{margin:.2rem 0}
+
+/* About page: text on the left, photo on the right */
+.about{display:grid;grid-template-columns:1fr 300px;gap:2.5rem;align-items:start}
+.portrait{margin:0}
+.portrait img{width:100%;height:auto;display:block;border:1px solid var(--accent);box-shadow:none}
+@media (max-width:760px){
+  .about{grid-template-columns:1fr}
+  .portrait{order:-1;max-width:300px}
 }
